@@ -25,8 +25,8 @@ syscall_speed:$(OBJ1)
 syscall_speed.o:syscall_speed.c
 	cc ${CFLAGS} -c  syscall_speed.c
 
-getnum.o:getnum.c	
-	cc ${CFLAGS} -c  getnum.c
+get_num.o:get_num.c	
+	cc ${CFLAGS} -c  get_num.c
 
 .PHONY :clean
 clean:
