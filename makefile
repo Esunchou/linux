@@ -19,11 +19,12 @@ syscall_speed:$(OBJ1)
 	cc -o syscall_speed $(OBJ1)  
 	mv syscall_speed $(BINDIR)
 
-syscall_speed.o:	
-	cc ${CFLAGS} -c  syscall_speed.c
 
 getnum.o:	
 	cc ${CFLAGS} -c  getnum.c
+
+syscall_speed.o:	
+	cc ${CFLAGS} -c  syscall_speed.c
 
 .PHONY :clean
 clean:
