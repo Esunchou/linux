@@ -1,13 +1,8 @@
 VPATH = lib:fileio
 
-
 all :syscall_speed
 
-SYSLIBS= -f -lcurses -f -lm -f -lnsl_s
-
-
 OBJ1 = syscall_speed.o get_num.o 
-
 
 BINDIR = $(HOME)/zhouyq/linux/bin
 LIB = $(HOME)/zhouyq/linux/lib
@@ -21,12 +16,6 @@ syscall_speed:$(OBJ1)
 
 
 
-
-syscall_speed.o:syscall_speed.c
-	cc ${CFLAGS} -c  syscall_speed.c
-
-get_num.o:get_num.c	
-	cc ${CFLAGS} -c  get_num.c
 
 .PHONY :clean
 clean:
