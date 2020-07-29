@@ -1,4 +1,4 @@
-VPATH=lib:fileio
+VPATH=$(HOME)/zhouyq/linux/lib:$(HOME)/zhouyq/linux/fileio
 all :syscall_speed
 
 SYSLIBS= -f -lcurses -f -lm -f -lnsl_s
