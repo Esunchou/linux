@@ -1,4 +1,4 @@
-VPATH=lib fileio
+VPATH=lib:fileio
 all :syscall_speed
 
 SYSLIBS= -f -lcurses -f -lm -f -lnsl_s
@@ -11,7 +11,7 @@ BINDIR = $(HOME)/zhouyq/linux/bin
 LIB = $(HOME)/zhouyq/linux/lib
 INCLUDEDIR = $(HOME)/zhouyq/linux/include
 
-CFLAGS=-I /include -I${INCLUDEDIR} -I.  -g -belf
+CFLAGS=-I /include -I${INCLUDEDIR} -I.  -g 
 
 syscall_speed:$(OBJ1)
 	cc -o syscall_speed $(OBJ1) -lcurses -lsocket 
@@ -20,7 +20,7 @@ syscall_speed:$(OBJ1)
 .c.o:	
 	cc ${CFLAGS} -c  $*.c
 
-.PHONY clean
+.PHONY :clean
 clean:
 	$(RM) *.o
 
