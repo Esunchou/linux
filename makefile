@@ -20,7 +20,7 @@ syscall_speed:$(OBJ1)
 .c.o:	
 	cc ${CFLAGS} -c  $*.c
 
-.PHONY clean
+.PHONY:clean
 clean:
 	$(RM) *.o
 
