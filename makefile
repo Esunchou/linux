@@ -1,4 +1,4 @@
-VPATH = $(HOME)/zhouyq/linux/lib:$(HOME)/zhouyq/linux/fileio
+VPATH = lib:fileio
 
 
 all :syscall_speed
@@ -13,14 +13,14 @@ BINDIR = $(HOME)/zhouyq/linux/bin
 LIB = $(HOME)/zhouyq/linux/lib
 INCLUDEDIR = $(HOME)/zhouyq/linux/include
 
-CFLAGS=-I /include -I${INCLUDEDIR} -I.  -g 
+CFLAGS=-I /include -I${INCLUDEDIR} -I.  -g -Wall
 
 syscall_speed:$(OBJ1)
-	cc -o syscall_speed $(OBJ1) -lcurses -lsocket 
+	cc -o syscall_speed $(OBJ1)  
 	mv syscall_speed $(BINDIR)
 
 %.o:	
-	cc ${CFLAGS} -c  $*.c
+	cc ${CFLAGS} -c  $^
 
 .PHONY :clean
 clean:
